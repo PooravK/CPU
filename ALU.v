@@ -1,3 +1,6 @@
+// Ye sab calculations perform karega
+// Combinational design taaki fast rahe aur clock cycle ka wait na kare
+
 module ALU(
     input signed [MAX_SIZE-1:0]in0, in1,
     input [2:0]ALU_op,
