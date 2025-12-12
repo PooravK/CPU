@@ -2,13 +2,11 @@
 // Combinational design taaki fast rahe aur clock cycle ka wait na kare
 
 module ALU(
-    input [MAX_SIZE-1:0]in0, in1,
+    input [31:0]in0, in1,
     input [3:0]ALU_op,
-    output reg [MAX_SIZE-1:0]result,
+    output reg [31:0]result,
     output zero_flag
     );
-
-    parameter MAX_SIZE = 32;
 
     parameter ADD_op = 4'b0000;
     parameter SUB_op = 4'b0001;
