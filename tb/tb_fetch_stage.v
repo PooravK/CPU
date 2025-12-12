@@ -1,4 +1,7 @@
 `timescale 1ns/1ps
+`include "rtl/fetch_stage.v"
+`include "rtl/PC.v"
+`include "rtl/Instruction_mem.v"
 
 module tb_fetch_stage();
     reg clk;
@@ -28,6 +31,10 @@ module tb_fetch_stage();
             rst = 1'b1;
             PC_op = 2'b00; //Increment
             PC_in = 32'h0000_0000;
+            uut.Instruction_module.mem[0] = 32'h00000013;
+            uut.Instruction_module.mem[1] = 32'h00108093;
+            uut.Instruction_module.mem[2] = 32'h00310113;
+            uut.Instruction_module.mem[3] = 32'h00a18193;
             #12;
             rst = 1'b0;
             #8;
