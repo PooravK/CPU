@@ -1,4 +1,5 @@
 `timescale 1ns/1ps
+`include "rtl/ALU.v" 
 
 module tb_ALU();
     reg [31:0]in0;

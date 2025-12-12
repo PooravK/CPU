@@ -1,9 +1,3 @@
-// Ye agle instruction ka memory address store karke rakhta hai 
-// Clock cycle ke start me ye address instruction memory ko bhejta hai, instruction memory isse fetch karti hai ki kaunsa instruction stored hai is address par
-// Fir ye instruction rest of the CPU ko send hota hai to be decoded and executed
-// Kyuki ham 32 bits use kar rhe hai
-
-
 module PC(
     input clk, rst,
     input [31:0]PC_in,
@@ -26,3 +20,11 @@ module PC(
         end
     end
 endmodule;
+
+// Module Purpose:
+// Stores the address of the next instruction to be performed
+// Sends this instruction to instruction memory on every rising clock pulse
+// THree tasks:
+// 1) Increament (By 4 because of 32 bit design (8 x 4 = 32))
+// 2) Load (Output the current input)
+// 3) Stall (Nothing changes in output)

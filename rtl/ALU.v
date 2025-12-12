@@ -1,6 +1,3 @@
-// Ye sab calculations perform karega
-// Combinational design taaki fast rahe aur clock cycle ka wait na kare
-
 module ALU(
     input [31:0]in0, in1,
     input [3:0]ALU_op,
@@ -37,3 +34,7 @@ module ALU(
 
     assign zero_flag = (result == 0);
 endmodule
+
+// Module Purpose:
+// Performs all calculations
+// Designed in combinational style so that it does not depend on clock and provides immediate results

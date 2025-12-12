@@ -1,8 +1,3 @@
-// Iska bas ek purpose hai, to connect PC and Instruction memory together
-// Ye address jump or branch me load hoga
-// Instruction jo fetch hua hai, this will come from IM_Instruction
-// Current instruction ka address
-
 module fetch_stage (
     input clk, rst,
     input [31:0]PC_in,
@@ -23,3 +18,7 @@ module fetch_stage (
         .PC_address(PC_out)
         );
 endmodule
+
+// Module purpose:
+// Acts as a wrapper for Program Counter and Instruction Memory
+// This address will be loaded into jump/branch
