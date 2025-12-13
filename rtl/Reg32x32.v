@@ -27,3 +27,7 @@ module Reg32x32(
         mem[0] = 0;
     end
 endmodule;
+
+// Module Purpose: 
+// Store instructions into 32x32 memory array
+// This register file can store 1kb of data
