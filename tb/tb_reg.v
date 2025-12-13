@@ -33,18 +33,65 @@ module tb_reg();
         $dumpvars(0, tb_reg);
 
         rst = 1;
+
         rd_we = 0;
+
         rs1_addr = 0;
         rs2_addr = 0;
+
         rd_addr = 0;
         rd_wdata = 0;
-        rs1_data = 0;
-        rs2_data = 0;
+
         #12;
 
         rst = 0;
         #8;
 
-        
+        uut.mem[3] = 32'hABAB_ABAB;
+        uut.mem[7] = 32'hBABA_BABA;
+        uut.mem[10] = 32'h1111_1111;
+        uut.mem[20] = 32'h2222_2222;
+        #20;
+
+        rs1_addr = 3;
+        rs2_addr = 7;
+        #20;
+
+        rd_we = 1;
+        rd_addr = 0;
+        rd_wdata = 32'hFFFF_FFFF;
+        #20;
+
+        rs1_addr = 0;
+        #20;
+
+        rd_we = 0;
+        rd_addr = 5;
+        rd_wdata = 32'hABCD_ABCD;
+        #20;
+
+        rs1_addr = 5;
+        #20;
+
+        rd_we = 1;
+        rd_addr = 5;
+        rd_wdata = 32'hABCA_ABCA;
+        #20;
+
+        rs1_addr = 5;
+        #20;
+
+        rs1_addr = 10;
+        rs2_addr = 20;
+        #20;
+
+        rd_addr = 8;
+        rd_wdata = 32'h0101_0101;
+        #20;
+
+        rs1_addr = 8;
+        #20;
+
+        $finish;
     end
-endmodule
+endmodule;

@@ -24,5 +24,6 @@ module Reg32x32(
     always @(*)begin
         rs1_data = (rs1_addr == 0)? 0 : mem[rs1_addr];
         rs2_data = (rs2_addr == 0)? 0 : mem[rs2_addr];
+        mem[0] = 0;
     end
 endmodule;
