@@ -10,6 +10,7 @@ I am building a fully functional pipelined processor capable of:
 ### ISA:
  - Harvard style architecture
  - All pipelines and register file operate on rising edge of clock
+
 **Goals:**
  - PC ✅
  - IM ✅
