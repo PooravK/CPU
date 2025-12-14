@@ -21,28 +21,28 @@ module ImmediateGenerator(
         case (instruct_type)
         OP_IMM: begin // I Type
             imm[11:0] = instruction[31:20]; // I did all the assigning using the op code table provided in official RISC-V documents
-            imm[31:12] = instruction[31]; // Sign extension
+            imm[31:12] = {20{instruction[31]}}; // Sign extension
         end
         LOAD: begin // I Type
             imm[11:0] = instruction[31:20];
-            imm[31:12] = instruction[31];
+            imm[31:12] = {20{instruction[31]}};
         end
         JALR: begin // I Type
             imm[11:0] = instruction[31:20];
-            imm[31:12] = instruction[31];
+            imm[31:12] = {20{instruction[31]}};
         end
         STORE: begin // S Type
             imm[11:5] = instruction[31:25];
             imm[4:0] = instruction[11:7];
-            imm[31:12] = instruction[31];
+            imm[31:12] = {20{instruction[31]}};
         end
         BRANCH: begin // B Type
             imm[12] = instruction[31];
             imm[10:5] = instruction[30:25];
             imm[4:1] = instruction[11:8];
             imm[11] = instruction[7];
-            imm[31:13] = instruction[31];
-            imm = imm << 1;
+            imm[31:13] = {19{instruction[31]}};
+            imm = imm << 1; // Shifted because B and J type instructions store addresses in units of 2 bytes instead of 1.
         end
         LUI: imm[31:12] = instruction[31:12]; // U Type
         AUIPC: imm[31:12] = instruction[31:12]; // U Type
@@ -51,8 +51,7 @@ module ImmediateGenerator(
             imm[10:1] = instruction[30:21];
             imm[11] = instruction[20];
             imm[19:12] = instruction[19:12];
-            imm[31:21] = instruction[31];
-            imm = imm << 1;
+            imm[31:21] = {11{instruction[31]}};
         end
         default: imm = 0; // R Type
         endcase
