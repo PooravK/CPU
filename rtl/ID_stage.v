@@ -19,7 +19,7 @@ module ID_stage(
         .rd_addr(rd_addr_decoder),
         .rs1_data(rs1_data),
         .rs2_data(rs2_data),
-        .rd_we(0),
+        .rd_we(1'b0),
         .rd_wdata(0)
     );
     decoder_stage DECODER(
