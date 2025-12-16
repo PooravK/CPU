@@ -1,0 +1,228 @@
+$date
+	Tue Dec 16 14:12:49 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_ID $end
+$var wire 5 ! rs2_addr [4:0] $end
+$var wire 5 " rs1_addr [4:0] $end
+$var wire 1 # reg_write $end
+$var wire 5 $ rd_addr [4:0] $end
+$var wire 1 % mem_write $end
+$var wire 1 & mem_to_reg $end
+$var wire 1 ' mem_read $end
+$var wire 1 ( jump_reg $end
+$var wire 1 ) jump $end
+$var wire 1 * branch $end
+$var wire 1 + alu_src $end
+$var wire 4 , alu_op [3:0] $end
+$var reg 32 - instruction [31:0] $end
+$scope module uut $end
+$var wire 32 . instruction [31:0] $end
+$var wire 5 / rs2_addr [4:0] $end
+$var wire 5 0 rs1_addr [4:0] $end
+$var wire 5 1 rd_addr [4:0] $end
+$var wire 7 2 op_code [6:0] $end
+$var wire 7 3 funct7 [6:0] $end
+$var wire 3 4 funct3 [2:0] $end
+$var parameter 7 5 AUIPC $end
+$var parameter 7 6 BRANCH $end
+$var parameter 7 7 JAL $end
+$var parameter 7 8 JALR $end
+$var parameter 7 9 LOAD $end
+$var parameter 7 : LUI $end
+$var parameter 7 ; OP $end
+$var parameter 7 < OP_IMM $end
+$var parameter 7 = STORE $end
+$var reg 4 > alu_op [3:0] $end
+$var reg 1 + alu_src $end
+$var reg 1 * branch $end
+$var reg 1 ) jump $end
+$var reg 1 ( jump_reg $end
+$var reg 1 ' mem_read $end
+$var reg 1 & mem_to_reg $end
+$var reg 1 % mem_write $end
+$var reg 1 # reg_write $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100011 =
+b10011 <
+b110011 ;
+b110111 :
+b11 9
+b1100111 8
+b1101111 7
+b1100011 6
+b10111 5
+$end
+#0
+$dumpvars
+b0 >
+b0 4
+b0 3
+b110011 2
+b101 1
+b110 0
+b111 /
+b11100110000001010110011 .
+b11100110000001010110011 -
+b0 ,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+b101 $
+1#
+b110 "
+b111 !
+$end
+#10000
+b1000 $
+b1000 1
+b1001 "
+b1001 0
+b1010 !
+b1010 /
+b101001001000010000110011 -
+b101001001000010000110011 .
+#20000
+1+
+1#
+b10011 2
+b101 $
+b101 1
+b110 "
+b110 0
+b101 !
+b101 /
+b10100110000001010010011 -
+b10100110000001010010011 .
+#30000
+b1 $
+b1 1
+b10 "
+b10 0
+b11111 !
+b11111 /
+b1111111 3
+b11111111111100010000000010010011 -
+b11111111111100010000000010010011 .
+#40000
+1&
+1'
+1+
+1#
+b11 2
+b101 $
+b101 1
+b10 4
+b11 "
+b11 0
+b1000 !
+b1000 /
+b0 3
+b100000011010001010000011 -
+b100000011010001010000011 .
+#50000
+1%
+0&
+0'
+1+
+0#
+b100011 2
+b1100 $
+b1100 1
+b1 "
+b1 0
+b100 !
+b100 /
+b10000001010011000100011 -
+b10000001010011000100011 .
+#60000
+1*
+0%
+0+
+b1100011 2
+b100 $
+b100 1
+b0 4
+b10 !
+b10 /
+b1000001000001001100011 -
+b1000001000001001100011 .
+#70000
+1)
+1+
+1#
+0*
+b1101111 2
+b1 $
+b1 1
+b0 "
+b0 0
+b1000 !
+b1000 /
+b100000000000000011101111 -
+b100000000000000011101111 .
+#80000
+1(
+0)
+1+
+1#
+b1100111 2
+b100 "
+b100 0
+b110 !
+b110 /
+b11000100000000011100111 -
+b11000100000000011100111 .
+#90000
+0(
+1+
+1#
+b110111 2
+b111 $
+b111 1
+b101 4
+b1000 "
+b1000 0
+b11 !
+b11 /
+b1001 3
+b10010001101000101001110110111 -
+b10010001101000101001110110111 .
+#100000
+1+
+1#
+b10111 2
+b11 $
+b11 1
+b0 4
+b10 "
+b10 0
+b0 !
+b0 /
+b0 3
+b10000000110010111 -
+b10000000110010111 .
+#110000
+0+
+0#
+b0 2
+b0 $
+b0 1
+b0 "
+b0 0
+b0 -
+b0 .
+#120000
