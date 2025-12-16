@@ -17,7 +17,7 @@ I am building a fully functional pipelined processor capable of:
  - ALU ✅
  - IF ✅
  - RF ✅
- - Decoder
+ - Decoder ✅
  - Immediate Generator ✅
  - ID/EX register
  - EX
