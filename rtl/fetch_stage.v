@@ -1,7 +1,7 @@
 module fetch_stage (
     input clk, rst,
     input [31:0]PC_in,
-    input [1:0]PC_op,
+    input PC_op,
     output [31:0]Instruction_out,
     output [31:0]PC_out
     );

@@ -1,12 +1,12 @@
 module PC(
     input clk, rst,
     input [31:0]PC_in,
-    input [1:0]PC_op,
+    input PC_op,
     output reg [31:0]PC_out
     );
 
-    parameter INCREAMENT = 2'b00;
-    parameter LOAD = 2'b01;
+    parameter INCREAMENT = 1'b0;
+    parameter LOAD = 1'b1;
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
