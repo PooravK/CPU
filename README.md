@@ -1,4 +1,5 @@
-# RV32I Five-Stage Pipelined CPU
+# RV32I SINGLE CYCLE CPU
+
 
 ## CPU Specifications:
  - 32 bit, Havard style architecture (Instruction memory separated from Data memory)
