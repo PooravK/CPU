@@ -60,6 +60,7 @@ or x6, x1, x2
 xor x7, x1, x2
 
  - Screenshot:
-<img width="1652" height="447" alt="Program_1_SIM" src="https://github.com/user-attachments/assets/be0453fb-6064-4a3b-8185-984f14dba639" />
+<img width="1646" height="485" alt="Program_1_SIM" src="https://github.com/user-attachments/assets/1ae59daf-303c-48e1-87ec-9f294983154f" />
+
 
 ### Program 2:
